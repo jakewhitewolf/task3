@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox prefHeight="600" prefWidth="900" spacing="12" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examle.task3.MainController">
+
+   <padding><Insets bottom="16" left="16" right="16" top="16" /></padding>
+
+   <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Панель управления сервером времени" textFill="WHITE" />
+
+   <HBox alignment="CENTER_LEFT" spacing="10">
+      <Button fx:id="serverStartBtn" text="Start" />
+      <Button fx:id="serverStopBtn" text="Stop" />
+      <Button fx:id="serverResetBtn" text="Reset" />
+      <Label fx:id="serverStatusLabel" textFill="WHITE" />
+      <Label fx:id="currentTimeLabel" textFill="WHITE" />
+   </HBox>
+
+   <HBox spacing="12" VBox.vgrow="ALWAYS">
+
+      <VBox prefWidth="280" spacing="10" style="-fx-background-color: #3b3b3b; -fx-padding: 12; -fx-background-radius: 10;">
+         <Label text="Панель инструментов компонента 1" textFill="WHITE" />
+         <Separator prefWidth="200.0" />
+         <Label style="-fx-font-weight: bold;" text="Рабочая панель компонента 1" textFill="WHITE" />
+         <Label fx:id="timeLabel" text="Прошло 0 секунд" textFill="WHITE" />
+      </VBox>
+
+      <VBox prefWidth="280" spacing="10" style="-fx-background-color: #3b3b3b; -fx-padding: 12; -fx-background-radius: 10;">
+         <Label text="Панель инструментов компонента 2" textFill="WHITE" />
+         <Separator prefWidth="200.0" />
+         <Label style="-fx-font-weight: bold;" text="Рабочая панель компонента 2" textFill="WHITE" />
+         <HBox spacing="10">
+            <Button fx:id="comp2StartBtn" text="Start" />
+            <Button fx:id="comp2StopBtn" text="Stop" />
+         </HBox>
+         <Label text="Проигрывает звук каждые 10 секунд" textFill="#c0c0c0" />
+      </VBox>
+
+      <VBox prefWidth="300" spacing="10" style="-fx-background-color: #3b3b3b; -fx-padding: 12; -fx-background-radius: 10;">
+         <Label text="Панель инструментов компонента 3" textFill="WHITE" />
+         <Separator prefWidth="200.0" />
+         <Label style="-fx-font-weight: bold;" text="Рабочая панель компонента 3" textFill="WHITE" />
+         <HBox spacing="10">
+            <Button fx:id="comp3StartBtn" text="Start" />
+            <Button fx:id="comp3StopBtn" text="Stop" />
+         </HBox>
+
+         <Circle fx:id="animationCircle" fill="#d6d6d6" radius="18" />
+
+         <Label text="Анимация каждые 20 секунд" textFill="#c0c0c0" />
+      </VBox>
+
+   </HBox>
+</VBox>
